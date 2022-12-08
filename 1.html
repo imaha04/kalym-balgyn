@@ -1,0 +1,69 @@
+<html>
+    <head>
+       <link rel="stylesheet" href="1.css">
+    </head>
+    <body>
+        <header>
+            <div class="menu">
+                <ul>
+                    <li class="menutxt">
+                        <button>
+                            <a  href="INDEX.HTML">Басты бетке өту</a>
+                        </button>
+            </div>
+            </header>
+        <header class="header">
+            <div class="nav">
+            <button class="button button_style_all" data-f="all"> all</button>
+            <button class="button button_style_guk" data-f="guk">ГУК</button>
+            <button class="button butoon_style_nk" data-f="nk">НК</button>
+            <button class="button butoon_style_kk" data-f="kk">ККУЦ</button>
+            </div>
+        </header>
+        <main class="content">
+            <div class="conteinor">
+                <div class="img nk"><img src="https://pbs.twimg.com/media/CnnstYuXgAA9tn-.jpg:large"></div>
+                <div class="img guk"><img src="https://tengrinews.kz/userdata/news/2019/news_379321/photo_293390.jpg"></div>
+                <div class="img guk"><img src="https://tengrinews.kz/userdata/news/2019/news_379321/photo_293390.jpg"></div>
+                <div class="img kk"><img src="https://storage.yvision.kz/images/user/funky_man/Xrrm6Pd7EyDR9Wg25gOsCt9prswTRK.jpg"></div>
+                <div class="img nk"><img src="https://pbs.twimg.com/media/CnnstYuXgAA9tn-.jpg:large"></div>
+                <div class="img nk"><img src="https://pbs.twimg.com/media/CnnstYuXgAA9tn-.jpg:large"></div>                
+                <div class="img kk"><img src="https://storage.yvision.kz/images/user/funky_man/Xrrm6Pd7EyDR9Wg25gOsCt9prswTRK.jpg"></div>
+                <div class="img guk"><img src="https://tengrinews.kz/userdata/news/2019/news_379321/photo_293390.jpg"></div>
+                <div class="img kk"><img src="https://storage.yvision.kz/images/user/funky_man/Xrrm6Pd7EyDR9Wg25gOsCt9prswTRK.jpg"></div>
+            </div>
+        </main>
+        <script>
+            function app(){
+    const buttons = document.querySelectorAll('.button')
+    const cards = document.querySelectorAll('.img')
+
+    function filter(category,items){
+        items.forEach((item) => {
+            const isItemFilter = item.classList.contains(category)
+            const isAll = category.toLowerCase() === 'all'
+            if (isItemFilter && !isAll){
+                item.classList.remove('hide')
+            }
+            else{
+                item.classList.add('hide')
+            }
+            if(isAll){
+                item.classList.remove('hide')
+            }
+        })
+    }
+
+    buttons.forEach((button) =>{
+        button.addEventListener('click',() => {
+            const currectCategory =button.dataset.f
+            filter(currectCategory,cards)
+            console.log(button.dataset.f)
+        })
+    })
+}
+app()
+        </script>
+    </body>
+</html>
+

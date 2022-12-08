@@ -1,0 +1,47 @@
+body{
+    background-color: blanchedalmond;
+    font-size: 15px;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+}
+.block{
+    text-align: center;
+}
+.content img{
+margin-left: 200px;
+width: 300px;
+margin: 30px;
+line-height: 100px;
+overflow: hidden;
+text-align: center;
+border-radius: 25%;
+}
+.content td{
+    color: blueviolet;
+    text-align: center;
+}
+.filter1{
+    width: 100%;
+    transition: 1s;
+    filter: blur(10px);
+}
+.filter1:hover{
+    width: 50%;
+    filter: none;
+}
+.filter2{
+    filter: drop-shadow(5px 5px 10px yellow);
+}
+.filter3{
+    filter: contrast(100%);
+}
+.filter4{
+    filter: invert(250%);
+}
+.filter5{
+    filter:opacity(100%)
+}
+.filter6{
+    filter: sepia(100%);
+    text-align: center;
+}
